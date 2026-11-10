@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Forge</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-block">
+          <div class="brand-mark">✦</div>
+          <div>
+            <h1>World Forge</h1>
+            <p>God mode</p>
+          </div>
+        </div>
+
+        <div class="tool-list" id="toolButtons">
+          <button class="tool active" data-tool="raise">⛰️ Raise</button>
+          <button class="tool" data-tool="lower">⛳ Lower</button>
+          <button class="tool" data-tool="river">🌊 River</button>
+          <button class="tool" data-tool="mountain">🏔️ Mountain</button>
+          <button class="tool" data-tool="forest">🌲 Forest</button>
+          <button class="tool" data-tool="animal">🦌 Animal</button>
+          <button class="tool" data-tool="person">👥 Person</button>
+          <button class="tool" data-tool="village">🏡 Village</button>
+          <button class="tool" data-tool="erase">🧹 Erase</button>
+        </div>
+
+        <div class="panel">
+          <label for="brushSize">Brush</label>
+          <input id="brushSize" type="range" min="1" max="7" value="3" />
+          <div class="slider-readout"><span>Size</span><strong id="brushLabel">3</strong></div>
+        </div>
+
+        <div class="stats panel">
+          <div><span>World</span><strong id="worldStat">0</strong></div>
+          <div><span>Villages</span><strong id="villageStat">0</strong></div>
+          <div><span>Animals</span><strong id="animalStat">0</strong></div>
+          <div><span>People</span><strong id="peopleStat">0</strong></div>
+        </div>
+
+        <div class="panel actions">
+          <button id="randomizeBtn">Generate world</button>
+          <button id="pauseBtn">Pause sim</button>
+        </div>
+      </aside>
+
+      <main class="viewport-wrap">
+        <div class="hud-top">
+          <span>Sandbox world</span>
+          <span id="statusText">Your world is alive.</span>
+        </div>
+        <canvas id="worldCanvas" width="960" height="600"></canvas>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
